@@ -1,0 +1,34 @@
+import java.util.Scanner;
+class NegativeException
+{
+    public static void main(String[] args)
+    {
+          Scanner sc = new Scanner(System.in); 
+ 
+          System.out.println("Enter Your Age : ");
+ 
+          int age = sc.nextInt();         
+ 
+          try
+          {
+              if(age < 0)
+              {
+                  throw new Exception();  
+              }
+          }
+          catch(Exception ex)
+          {
+              System.out.println(ex);     
+          }
+    }
+}
+
+
+Output:
+       Enter your age : 23
+       there is no Exception when we enter the positive value.
+       
+       Enter your age : -23
+       java.lang.Exception
+       
+       here it is showing Exception because of negative value.
